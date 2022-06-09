@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/modelo.css">    
+</head>
+<body>
+    <header>
+        <div class="logo"> Cadastro <img src="images/logobrunojpeg.jpg" width="65" height="65" alt="logo" style="border-radius:50%"> usuários</div>
+    </header>
+
+    <section>
+        <div id="div1">
+            <h2>Cadastramento</h2>
+            <form action=" / action_page.php">
+                <label for="name">Nome completo:</label><br>
+                <input type="text" id="idname" name="name" style="width:95%"><br>
+                <label for="birth">Nascimento:</label><br>
+                <input type="date" id="iddate" name="date" style="width:95%"><br>
+                <label for="sex">Sexo:</label><br>
+                Masc<input type="radio"  value="Masculino" id="idmsex" name="sex" checked>
+                Fem<input type="radio"  value="Feminino" id="idfsex" name="sex"><br>
+                <label for="weight">Peso:</label><br>
+                <input type="number" id="idweight" name="weight" style="width:95%"><br>
+                <label for="height">Altura:</label><br>
+                <input type="number" id="idheight" name="height" style="width:95%"><br>               
+                <label for="country">País de origem:</label><br>
+                <input type="text" id="idcountry" name="country" style="width:95%"><br>
+                <label for="avatar">Foto de perfil:</label><br>
+                <input type="file" id="idavatar"  name="avatar" style="width:95%" accept="image/png, image/jpeg"><br>
+                <p><button  type="submit" name="submit" value="save">Salvar</button></p>
+            </form>
+        </div>
+        <div id="div2">
+            <h2>Lista de usuários</h2>
+
+        </div>
+        <div id="div3">
+            <h2>Informações do usuário</h2>
+
+        </div>
+        
+    </section>
+
+
+    <footer>
+        <p>&copy;Bruno Américo</p>
+
+    </footer>    
+</body>
+</html>
