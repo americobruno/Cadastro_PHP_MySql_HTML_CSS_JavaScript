@@ -1,17 +1,16 @@
+
 body{
     background-image: url("background-opacity.png"); 
     background-size: 100% ;
     background-color: aliceblue;          
-    font: normal 15pt Arial;
-           
+    font: normal 15pt Arial;           
 }
 
 header{
     color:  whitesmoke;
     text-align:left;
     text-shadow: 5px 5px 5px black ;
-    transition: all 0.3s; 
-    
+    transition: all 0.3s;     
 }
 .logo{
     border-radius: 10px;    
@@ -24,15 +23,13 @@ header{
     font-family: 'Bebas Neue', cursive;
     font-size: 50px;
 }
-section{
+.sectionc{
     border-radius: 10px;
     padding: 15px;
     height: calc(100vh - 276px);
     margin:50px auto ;
     box-shadow: 5px 5px 10px black;
-    display: flex;
-    
-    
+    display: flex;  
 }
 #div1{
     flex:1;
@@ -54,39 +51,86 @@ section{
     padding: 5px;
     background-color: rgba(215, 216, 129, 0.2);
     border-radius: 10px;
+    
 }
-button{
+.csavebutton{ /*pedir ajuda, como colocar o botão para o lado direito da div*/
     background: #0066A2;
     color: white;
     border-style: outset;
     border-color: #0066A2;
-    text-shadow:none;
+    text-shadow:none;    
 }
-
 footer{ 
     color: rgb(154, 193, 211);
     text-align: center;
+    text-shadow: 3px 3px 3px white ;
     font-style: italic;
     font: normal 9pt Arial;
 }
-
 @media only screen and (min-width: 1000px){
     header{
         letter-spacing: 10px;
-    }
-    
+    }    
 }
 @media only screen and (min-width: 1400px){
-    header{letter-spacing: 30px;}
-    
+    header{letter-spacing: 30px;}    
 }
 @media only screen and (max-width: 974px){
-    h2{font-size: 25px;}
-    
+    h2{font-size: 25px;}    
 }
-
 h2{
     text-shadow: 8px 8px 8px white;
+    text-align: center;    
+}
+.ctable{
+    text-align: center; 
+    font-size: 15px;
+    width: 100%;
+}
+
+.img-circle{
+    border-radius: 50%;    
     text-align: center;
+    padding: 5px;
+    width: 25px;
+}
+.ceditbutton{
+    background: #0066A2;
+    color: rgb(221, 238, 71);
+    border-style: outset;
+    border-color: #0066A2;
+    font-size: 12px;
+    width: auto;
+    border-radius: 5px;
+}
+.cdeletebutton{
+    background: #0066A2;
+    color: rgb(221, 238, 71);
+    border-style: outset;
+    border-color: #0066A2;
+    font-size: 12px;
+    border-radius: 5px;
+}
+.cbody{
+    border-radius: 10px; /* Pedir ajuda, não está arredondando */
+    background-color: rgb(0, 0, 0, 0.3);
+    color: white;   
+    
+}
+.cform{
+    height: calc(100vh - 375px);
+    overflow-y: scroll;
+}
+.divphotoinfo{
+    border-radius: 50%;    
+    padding: 5px;
+    width: 200px;    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
     
 }

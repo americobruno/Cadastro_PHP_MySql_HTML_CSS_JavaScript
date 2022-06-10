@@ -12,37 +12,101 @@
 </head>
 <body>
     <header>
-        <div class="logo"> Cadastro <img src="images/logobrunojpeg.jpg" width="65" height="65" alt="logo" style="border-radius:50%"> usuários</div>
+        <div class="logo"> Cadastro <img src="images/logobrunojpeg.jpg" width="65" height="65" alt="logo" style="border-radius:50%"> pacientes</div>
     </header>
 
-    <section>
+    <section class="sectionc">
         <div id="div1">
             <h2>Cadastramento</h2>
-            <form action=" / action_page.php">
-                <label for="name">Nome completo:</label><br>
-                <input type="text" id="idname" name="name" style="width:95%"><br>
-                <label for="birth">Nascimento:</label><br>
-                <input type="date" id="iddate" name="date" style="width:95%"><br>
-                <label for="sex">Sexo:</label><br>
+            <form class="cform" action=" / action_page.php">  <!-- Confirmar com o acerola -->
+                <p><label for="avatar">Foto de perfil:</label>
+                <input type="file" id="idavatar"  name="avatar" style="width:95%" accept="image/png, image/jpeg"></p>
+                <p><label for="name">Nome completo:</label>
+                <input type="text" id="idname" name="name" style="width:95%"></p>
+                <p><label for="birth">Nascimento:</label>
+                <input type="date" id="iddate" name="date" style="width:95%"></p>
+                <p><label for="sex">Sexo:</label>
                 Masc<input type="radio"  value="Masculino" id="idmsex" name="sex" checked>
-                Fem<input type="radio"  value="Feminino" id="idfsex" name="sex"><br>
-                <label for="weight">Peso:</label><br>
-                <input type="number" id="idweight" name="weight" style="width:95%"><br>
-                <label for="height">Altura:</label><br>
-                <input type="number" id="idheight" name="height" style="width:95%"><br>               
-                <label for="country">País de origem:</label><br>
-                <input type="text" id="idcountry" name="country" style="width:95%"><br>
-                <label for="avatar">Foto de perfil:</label><br>
-                <input type="file" id="idavatar"  name="avatar" style="width:95%" accept="image/png, image/jpeg"><br>
-                <p><button  type="submit" name="submit" value="save">Salvar</button></p>
+                Fem<input type="radio"  value="Feminino" id="idfsex" name="sex"></p>
+                <p><label for="weight">Peso:</label>
+                <input type="number" id="idweight" name="weight" style="width:95%"></p>
+                <p><label for="height">Altura:</label>
+                <input type="number" id="idheight" name="height" style="width:95%"></p>             
+                <p><label for="country">País de origem:</label>
+                <input type="text" id="idcountry" name="country" style="width:95%"></p>
+                <p><label for="plano">Plano:</label>
+                <select name="plan" id="idplan" style="width:95%">
+                    <option value="" data-default disabled selected></option>
+                    <option value="Privado">Privado</option>
+                    <option value="Unimed">Unimed</option>
+                    <option value="OdontoPlus">Odonto Plus</option>
+                    <option value="SUS">SUS</option>
+                </select></p>
+                <p><label for="dentist">Dentista:</label>
+                <select name="dentist" id="iddentist" style="width:95%">
+                    <option value="" data-default disabled selected></option>
+                    <option value="Bruna">Bruna Advico Pelegrin</option>
+                    <option value="Terceirizada">Terceirizada</option>
+                </select></p>
+                
+                <p><label for="healthhistory">Histórico de saúde:</label>
+                <textarea cols="30" rows="5" style="width:95%"></textarea></p>
+                <p><label for="observations">Observações:</label>
+                <textarea cols="30" rows="5" style="width:95%"></textarea></p>
+                <p><button class="csavebutton" type="submit" name="submit" value="save">Salvar</button></p>
             </form>
         </div>
         <div id="div2">
-            <h2>Lista de usuários</h2>
-
+            <h2>Lista de pacientes</h2>
+            <section class="sectioncontainer">
+                <table class="ctable">
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Nascimento</th>
+                            <th>Sexo</th>
+                            <th>País</th>  
+                            <th>Ações</th>                          
+                        </tr>                        
+                    </thead>
+                    <tbody class="cbody">
+                        <tr>
+                            <td><img src="images/person.png" alt="User Image" class="img-circle"></td>
+                            <td>1</td>
+                            <td>Bruno</td>
+                            <td>05/04/1991</td>
+                            <td>Masc</td>
+                            <td>Brasil</td>
+                            <td>
+                            <button type="button" class="ceditbutton">Editar</button>
+                            <button type="button" class="cdeletebutton">Excluir</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><img src="images/person.png" alt="User Image" class="img-circle"></td>
+                            <td>2</td>
+                            <td>Brenda</td>
+                            <td>15/11/1993</td>
+                            <td>Fem</td>
+                            <td>Brasil</td>
+                            <td>
+                            <button type="button" class="ceditbutton">Editar</button>
+                            <button type="button" class="cdeletebutton">Excluir</button>
+                            </td>
+                          </tr>
+                    </tbody>
+                </table>
+            </section>
         </div>
         <div id="div3">
-            <h2>Informações do usuário</h2>
+            <h2>Informações do paciente</h2>
+            <div class="divphotoinfo">
+                <img src="images/person.png" alt="User Image" class="divphotoinfo">
+            </div>
+            
+
 
         </div>
         
