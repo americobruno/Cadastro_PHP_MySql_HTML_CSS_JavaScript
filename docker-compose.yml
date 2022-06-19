@@ -1,0 +1,27 @@
+version: '3'
+services:
+    php:
+        build:
+            context: ./php-docker-build-context
+        ports:
+            - 8000:80
+        volumes:
+            - ./:/var/www/html
+        links:
+            - 'mariadb'
+
+    mariadb:
+        image: mariadb:10.1
+        ports:
+            - 3306:3306
+        volumes:
+            - mariadb:/var/lib/mysql
+        environment:
+            TZ: "Europe/Rome"
+            MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+            MYSQL_ROOT_PASSWORD: ""
+            MYSQL_USER: 'projeto'
+            MYSQL_PASSWORD: 'projeto'
+            MYSQL_DATABASE: 'projeto'
+volumes:
+    mariadb:
