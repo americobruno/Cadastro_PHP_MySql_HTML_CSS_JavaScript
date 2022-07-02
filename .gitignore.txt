@@ -1,0 +1,14 @@
+#ignore pasta adm
+admin
+
+#ignore pasta php-docker-build-context
+php-docker-build-context
+
+#ignore arquivos txt
+.txt
+
+#ignore chaves de api
+.env
+
+#ignore arquivos de configuração SASS
+.sass-cache
