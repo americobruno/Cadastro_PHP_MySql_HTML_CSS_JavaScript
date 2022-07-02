@@ -1,6 +1,9 @@
 #ignore pasta adm
 admin
 
+#ignore yml
+docker-compose.yml
+
 #ignore pasta php-docker-build-context
 php-docker-build-context
 
